@@ -1,0 +1,4 @@
+services:
+  plugin.manager.node_bundle_entity:
+    class: Drupal\node_bundle_entity\NodeBundleEntityManager
+    parent: default_plugin_manager

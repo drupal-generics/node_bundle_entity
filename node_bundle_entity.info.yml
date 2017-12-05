@@ -1,0 +1,5 @@
+name: Node bundle entity
+type: module
+description: Provides plugin to create bundle specific entities with custom methods.
+package: plugin
+core: 8.x

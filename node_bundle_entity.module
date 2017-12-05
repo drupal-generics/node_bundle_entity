@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Implements hooks.
+ */
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function node_bundle_entity_entity_type_alter(array &$entity_types) {
+  /** @var \Drupal\Core\Entity\ContentEntityType $nodeEntityType */
+  $nodeEntityType = $entity_types['node'];
+
+  // Replace the node storage with our own that can instantiate custom plugin
+  // defined entity classes per bundle.
+  $nodeEntityType->setHandlerClass('storage', 'Drupal\node_bundle_entity\NodeStorage');
+}
